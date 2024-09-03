@@ -1,0 +1,10 @@
+<div class="product-container">
+  <!-- ここを記述しよう！ -->
+  <div>
+    <p><%= @good.good_name %></p>
+    <p class="item-price"><%= @good.good_name %></p>
+    <form action="/product/<%= @good.id %>" method="post">
+      <button type="sumbit">購入</button>
+    </form>
+  </div>
+</div>

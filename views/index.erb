@@ -1,0 +1,20 @@
+<div class="top">
+  <h1>Techzon</h1>
+</div>
+<div class="item-container">
+  <a href="/history">購入履歴</a>
+  <!--ここを記述しましょう-->
+  <% if @goods.size == 0 %>
+    <p>まだ商品がありません</p>
+  <% else %>
+  <!--ここを記述しましょう-->
+    <% @goods.each do |good| %>
+      <div class="item">
+        <a href="/product/<%= good.id %>">
+          <p><%= good.good_name %><%= good.id %></p>
+        </a>
+        <p class="item-price">円でございます</p>
+      </div>
+    <% end %>
+  <% end %>    
+</div>

@@ -1,0 +1,22 @@
+<% if @page_name == "admin" || @page_name == "products" %>
+  <div class="admin-nav">
+    <a href="/">Store</a>
+    <a href="/admin">Dashboard</a>
+    <a href="/admin/products">Products</a>
+  </div>
+<% elsif @page_name == "authenticate" %>
+  <div>
+    
+  </div>
+<% else %>
+  <div id="nav">
+    <a href="/">
+      <img src="/img/bilson-silhouette.svg">
+      <p>Techzon</p>
+    </a>
+    <div class="nav-links">
+      <a href="">注文履歴</a>
+      <a href="">ログアウト</a>
+    </div>
+  </div>
+<% end %>

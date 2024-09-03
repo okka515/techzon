@@ -1,0 +1,31 @@
+<div class="history">
+  <h2>注文履歴</h2>
+  <% if @history.size == 0 %>
+    <p>まだ何も注文してないです</p>
+  <% else %>
+  <!--ここを記述しましょう-->
+    <div class="table">
+      <div class="table-header">
+        <p>アイテム</p>
+        <div class="detail">
+          <p>注文日</p>
+        </div>
+      </div>
+      <div class="history-container">
+        <% @history.each do |history| %>
+          <div class="history-item">
+            <div class="item-box">
+              <div class="item-ex">
+                <p><%= history.good_name %></p>
+                <p><%= history.price %></p>
+              </div>
+            </div>
+            <p class="item-total-price"></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<script type="module" src="/js/count.js"></script>
